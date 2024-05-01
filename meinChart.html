@@ -3,7 +3,26 @@
   <head>
     <title>Chart</title>
     <meta charset="uft-8">
-    <link rel="stylesheet" href="chartist.css">
-    <script src="chartist.js"></script>
+    <link rel="stylesheet" href="ChartistDateien/chartist.css">
+    <script src="ChartistDateien/chartist.js"></script>  
   </head>
+  <body>
+    <div class="ct-chart ct-double-octave"></div> 
+    <script>
+      var meineDaten = {
+        labels: [ 'Gelb', 'Rot', 'Blau', 'Schwarz'],
+        series: [
+          [0, 42, 4, -10, 5 ]
+        ]
+      };
+
+      var optionen = {
+        showArea: true,
+        width: 800,
+        height: 600
+      };
+
+      new Chartist.Line('.ct-chart', meineDaten, optionen);
+    </script>
+  </body>
 </html>
